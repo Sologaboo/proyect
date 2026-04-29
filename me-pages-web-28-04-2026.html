@@ -1,0 +1,127 @@
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional | Servicios Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+
+
+<nav class="navbar">
+    <div class="logo-contenedor">
+        <span class="icono-marca">🚀</span> 
+        <span class="nombre-marca">Servicios Pro <span class="destaque">Digital</span></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><button id="abrirModal" class="btn-contacto">¡Contrátame!</button></li>
+    </ul>
+</nav>
+
+    <header>
+        <h1>Gabriel Molina</h1>
+        <p>Soluciones en Ofimática, Redacción y Diseño</p>
+    </header>
+
+<div id="modalContacto" class="modal-fondo oculto">
+    <div class="modal-contenido">
+        <span id="cerrarModal" class="boton-cerrar">&times;</span>
+        <h2>Cuéntame tu proyecto</h2>
+        
+        <form id="miFormulario">
+            <div class="grupo-control">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+            </div>
+
+            <div class="grupo-control">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" placeholder="nombre@ejemplo.com" required>
+            </div>
+            
+            <div class="grupo-control">
+                <label for="servicio-interes">Servicio interesado</label>
+                <select id="servicio-interes">
+                    <option value="Curriculo">Diseño de Currículo</option>
+                    <option value="Ofimatica">Ofimática / Excel</option>
+                    <option value="Redaccion">Redacción de Texto</option>
+                    <option value="Diseno">Diseño de Imágenes</option>
+                </select>
+            </div>
+            
+            <div class="grupo-control">
+                <label for="mensaje">¿Cómo puedo ayudarte?</label>
+                <textarea id="mensaje" placeholder="Describe brevemente tu necesidad..." required></textarea>
+            </div>
+            
+            <button type="submit" id="btn-enviar">Enviar Solicitud</button>
+        </form>
+    </div>
+</div>
+    <section id="servicios">
+        <div class="card" onclick="seleccionarServicio('Redacción de Textos')">
+            <h3>Redacción y Estilo</h3>
+            <p>Creación de contenido profesional y corrección de textos.</p>
+        </div>
+        <div class="card" onclick="seleccionarServicio('Ofimática e Informática')">
+            <h3>Ofimática</h3>
+            <p>Gestión de datos, Excel avanzado y soporte informático.</p>
+        </div>
+        <div class="card" onclick="seleccionarServicio('Diseño e Imágenes')">
+            <h3>Diseño Creativo</h3>
+            <p>Creación de imágenes y diseño visual para marcas.</p>
+        </div>
+    </section>
+
+    <div id="notificacion" class="oculto">
+        <p>Has seleccionado: <span id="servicio-nombre"></span>. ¡Pronto te contactaré!</p>
+    </div>
+    
+    <section id="galeria">
+    <h2>Mi Trabajo en Diseño</h2>
+    <div class="grid-galeria">
+        <div class="item-galeria">
+            <img src="https://via.placeholder.com/300x200" alt="Diseño de currículo">
+            <p>Diseño de Currículo Moderno</p>
+        </div>
+        <div class="item-galeria">
+            <img src="https://via.placeholder.com/300x200" alt="Edición de imagen">
+            <p>Edición Fotográfica Pro</p>
+        </div>
+        <div class="item-galeria">
+            <img src="https://via.placeholder.com/300x200" alt="Plantilla Ofimática">
+            <p>Plantillas de Excel</p>
+        </div>
+    </div>
+</section>
+
+
+<button id="modo-toggle" class="boton-flotante-modo">
+    <i class="fas fa-moon"></i>
+</button>
+
+<a href="https://wa.me/+584125420790" class="whatsapp-flotante" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<footer>
+    <div class="redes-sociales">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>&copy; 2026 Servicios Pro Digital. Todos los derechos reservados.</p>
+</footer>
+
+
+    <script src="script.js"></script>
+    <script src="script-date-base.js"></script>
+    <script src="script-button.js"></script>
+</body>
+</html>
